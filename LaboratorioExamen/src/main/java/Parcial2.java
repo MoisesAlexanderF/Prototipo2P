@@ -26,21 +26,156 @@ public class Parcial2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        MBCont = new javax.swing.JMenuBar();
+        MArch = new javax.swing.JMenu();
+        MProc = new javax.swing.JMenu();
+        MCat = new javax.swing.JMenu();
+        MIMarc = new javax.swing.JMenuItem();
+        MILin = new javax.swing.JMenuItem();
+        MIBod = new javax.swing.JMenuItem();
+        MIProv = new javax.swing.JMenuItem();
+        MIVend = new javax.swing.JMenuItem();
+        MInf = new javax.swing.JMenu();
+        MHerr = new javax.swing.JMenu();
+        MAyud = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 748, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 375, Short.MAX_VALUE)
+        );
+
+        MArch.setText("Archivo");
+
+        MProc.setText("Procesos");
+        MArch.add(MProc);
+
+        MBCont.add(MArch);
+
+        MCat.setText("Catálogos");
+
+        MIMarc.setText("Marcas");
+        MIMarc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIMarcActionPerformed(evt);
+            }
+        });
+        MCat.add(MIMarc);
+
+        MILin.setText("Líneas");
+        MILin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MILinActionPerformed(evt);
+            }
+        });
+        MCat.add(MILin);
+
+        MIBod.setText("Bodegas");
+        MIBod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIBodActionPerformed(evt);
+            }
+        });
+        MCat.add(MIBod);
+
+        MIProv.setText("Proveedores");
+        MIProv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIProvActionPerformed(evt);
+            }
+        });
+        MCat.add(MIProv);
+
+        MIVend.setText("Vendedores");
+        MIVend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIVendActionPerformed(evt);
+            }
+        });
+        MCat.add(MIVend);
+
+        MBCont.add(MCat);
+
+        MInf.setText("Informes");
+        MBCont.add(MInf);
+
+        MHerr.setText("Herramientas");
+        MBCont.add(MHerr);
+
+        MAyud.setText("Ayuda");
+        MBCont.add(MAyud);
+
+        jMenu3.setText("Exit");
+        MBCont.add(jMenu3);
+
+        setJMenuBar(MBCont);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MIMarcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIMarcActionPerformed
+        FrmMantMarc frmMM = new FrmMantMarc();
+        frmMM.setVisible(true);
+        DP_Workbench.add(frmMM);
+    }//GEN-LAST:event_MIMarcActionPerformed
+
+    private void MILinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MILinActionPerformed
+        FrmMantLin frmML = new FrmMantLin();
+        frmML.setVisible(true);
+        DP_Workbench.add(frmML);
+    }//GEN-LAST:event_MILinActionPerformed
+
+    private void MIBodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIBodActionPerformed
+        FrmMantBod frmMB = new FrmMantBod();
+        frmMB.setVisible(true);
+        DP_Workbench.add(frmMB);
+    }//GEN-LAST:event_MIBodActionPerformed
+
+    private void MIProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIProvActionPerformed
+        FrmMantProv frmMP = new FrmMantProv();
+        frmMP.setVisible(true);
+        DP_Workbench.add(frmMP);
+    }//GEN-LAST:event_MIProvActionPerformed
+
+    private void MIVendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIVendActionPerformed
+        FrmMantVend frmMV = new FrmMantVend();
+        frmMV.setVisible(true);
+        DP_Workbench.add(frmMV);
+    }//GEN-LAST:event_MIVendActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +213,23 @@ public class Parcial2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu MArch;
+    private javax.swing.JMenu MAyud;
+    private javax.swing.JMenuBar MBCont;
+    private javax.swing.JMenu MCat;
+    private javax.swing.JMenu MHerr;
+    private javax.swing.JMenuItem MIBod;
+    private javax.swing.JMenuItem MILin;
+    private javax.swing.JMenuItem MIMarc;
+    private javax.swing.JMenuItem MIProv;
+    private javax.swing.JMenuItem MIVend;
+    private javax.swing.JMenu MInf;
+    private javax.swing.JMenu MProc;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
